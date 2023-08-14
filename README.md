@@ -31,6 +31,7 @@ WantedBy=multi-user.target
 ~~~
 ----------------------------------------------------------------
 参数-c指cpu使用率，-m指内存使用率。
+
 启动并保存:
 ~~~
 systemctl enable --now lookbusy.service
