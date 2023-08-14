@@ -31,11 +31,16 @@ WantedBy=multi-user.target
 ~~~
 ----------------------------------------------------------------
 参数-c指cpu使用率，-m指内存使用率。
-启动并保存:systemctl enable --now lookbusy.service
-如果要停止:systemctl disable --now lookbusy.service
-检查机器cpu、内存、负载情况:top
+启动并保存:
 ~~~
-代码区域
+systemctl enable --now lookbusy.service
 ~~~
-[文章来源](https://ybfl.xyz/sites/167.html)
-
+如果要停止:
+~~~
+systemctl disable --now lookbusy.service
+~~~
+检查机器cpu、内存、负载情况:
+~~~
+top
+~~~
+[代码来源](https://ybfl.xyz/sites/167.html)
