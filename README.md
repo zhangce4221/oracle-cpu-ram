@@ -2,15 +2,18 @@
 目前甲骨文个人用户已经基本不能注册免费账号了，因此目前保护好自己的账号内的机器显得尤为重要。
 以下教程来自荒岛大佬
 这里介绍个小工具：lookbusy，这是一个linux系统负载生成器，可以根据你的配置来占用cpu、内存等资源。
-
-apt -y update
-apt -y install curl build-essential
-curl -L https://github.com/zhangce4221/oracle-cpu-ram/blob/main/lookbusy-1.4.tar.gz -o lookbusy-1.4.tar.gz
-tar -xzvf lookbusy-1.4.tar.gz
-cd lookbusy-1.4/
-./configure && make && make install
-
-新建systemd服务：systemctl edit --full --force lookbusy.service
+~~~
+apt -y update  #更新
+apt -y install curl build-essential    #安装依赖
+curl -L https://github.com/zhangce4221/oracle-cpu-ram/blob/main/lookbusy-1.4.tar.gz -o lookbusy-1.4.tar.gz  #该项目下载到当前目录
+tar -xzvf lookbusy-1.4.tar.gz   #解压到当前目录
+cd lookbusy-1.4/    #进入解压出来的目录
+./configure && make && make install   #运行程序
+~~~
+新建systemd服务：
+~~~
+systemctl edit --full --force lookbusy.service
+~~~
 ----------------------------------------------------------------
 ~~~
 [Unit]
